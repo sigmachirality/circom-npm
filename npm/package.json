@@ -1,5 +1,5 @@
 {
-  "name": "circom2",
+  "name": "circom2-pasta",
   "version": "0.2.13",
   "description": "Circom 2.0 in WebAssembly",
   "main": "index.js",
@@ -8,14 +8,14 @@
     "build": "docker build -o . ..",
     "build-dev": "rustwasmc build --dev ../circom && cp ../circom/pkg/circom.wasm circom.wasm"
   },
-  "repository": "https://github.com/antimatter15/circom",
+  "repository": "https://github.com/sigmachirality/circom",
   "bin": {
-    "circom2": "./cli.js"
+    "circom2-pasta": "./cli.js"
   },
   "engines": {
     "node": ">=15"
   },
-  "author": "antimatter15 <antimatter15@gmail.com>",
+  "author": "antimatter15 <antimatter15@gmail.com>, sigmachirality",
   "license": "GPL-3.0",
   "dependencies": {
     "@wasmer/wasi": "^0.12.0",

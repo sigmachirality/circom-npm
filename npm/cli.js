@@ -7,7 +7,7 @@ const path = require('path')
 async function main() {
     const args = process.argv
         .slice(2)
-        .map((k) => (k.startsWith('-') ? k : path.relative(process.cwd(), k)))
+        .map((k) => (k.startsWith('-') ? k : path.relative(process.cwd(), k)))``
     if (args.length === 0) args.push('--help')
     const circom = new CircomRunner({
         args,
@@ -27,7 +27,7 @@ async function main() {
     const wasm_bytes = fs.readFileSync(require.resolve('./circom.wasm'))
     // There is a slight delay between this logging and the circom compiler version logging
     if (args.includes('--version')) {
-        console.log('circom2 npm package', require('./package.json').version)
+        console.log('circom2-pasta npm package', require('./package.json').version)
     }
     await circom.execute(wasm_bytes)
 }
